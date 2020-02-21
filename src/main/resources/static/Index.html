@@ -1,11 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Sunflower Clinic</title>
     <link rel="stylesheet" href="IndexStyles.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Sunflower Clinic Website</h1>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
+    <header>
+        <img id="logo" src="/images/Clinic-Logo.png" alt="Sunflower Clinic Logo"/>
+        <div class="container" id="side_header">
+            <div id="slogan" class="container"><h1>You deserve the best treatment.</h1></div>
+            <div id="navbar" class="container">
+                <ul id="navOptions">
+                    <li id="Home">Home</li>
+                    <li id="Massage">Massage</li>
+                    <li id="Add-ons">Add-ons</li>
+                    <li id="Contact">Contact Us</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="main" class="container">
+        <div id="welcome">
+            <h1>About Us</h1>
+            <p>
+                At Sunflower Clinic, we know that every client has different goals for their massage experience.  We are dedicated to understanding your personal needs in order to work with you to reach those goals. Massage treatments have a host of benefits, such as reducing stress and anxiety, improving sleep and circulation, and relaxing muscles; but no matter what your reason for seeking a massage, we’re here to give you the very best treatment.
+            </p>
+        </div>
+        <div id="newsfeed">
+            <div class="fb-page" data-href="https://www.facebook.com/Sunflowerclinicmassage" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Sunflowerclinicmassage" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Sunflowerclinicmassage">Sunflower Clinic</a></blockquote></div>
+        </div>
+    </div>
+    <footer>
+        <h1>Contact Us</h1>
+        <div class="container">
+            <div id="contactInfo">
+                <p>601 N. Mur-Len Rd.</br>
+                    Ste. 11a</br>
+                    Olathe, KS 66062</p>
+                <p>(913) 242-0814</p>
+                <p>sunflowerclinicmassage@gmail.com</p>
+            </div>
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198413.22916037473!2d-94.88319596991805!3d39.01059799034332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x341887cbd0ce6fc9!2sSunflower%20Clinic!5e0!3m2!1sen!2sus!4v1581787920296!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </div>
+
+
+    </footer>
+
+
 </body>
 </html>
