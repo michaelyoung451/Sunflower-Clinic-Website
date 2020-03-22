@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th='http://www.thymeleaf.org/'>
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title>Sunflower Clinic</title>
+    <link rel="stylesheet" th:href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header th:fragment="header">
+    <a href="/"><img id="logo" src="/images/Clinic-Logo.png" alt="Sunflower Clinic Logo"/></a>
+    <div class="container" id="side_header">
+        <div id="slogan" class="container"><h1>You deserve the best treatment.</h1></div>
+        <div id="navbar" class="container">
+            <div th:replace=" fragments :: navOptions" id="navList"></div>
+        </div>
+    </div>
+</header>
+
+<div th:fragment="navOptions">
+    <a class="btn" id="Home" href="/">Home</a>
+    <a class="btn" id="Services" href="services">Services</a>
+    <a class="btn" id="Add-ons">Add-ons</a>
+    <a class="btn" id="Contact">Contact Us</a>
+    <a class="btn" id="Call Now" href="tel: 913-242-0814">Call Now</a>
+</div>
+
+<footer th:fragment="footer">
+
+    <h1 style="text-align: center">Contact Us</h1>
+    <div class="container" id="footerBox">
+
+        <div class="footerItems">
+            <div id="footerNav">
+                <li><a class="btn" href="/">Home</a></li>
+                <li><a class="btn" href="services">Services</a></li>
+                <li><a class="btn" >Add-ons</a></li>
+                <li><a class="btn" >Contact Us</a></li>
+            </div>
+        </div>
+
+        <div class="footerItems" id="contactInfo">
+            <p>601 N. Mur-Len Rd.</br>
+                Ste. 11A</br>
+                Olathe, KS 66062</p>
+            <p>(913) 242-0814</a>
+            <p>sunflowerclinicmassage@gmail.com</p>
+            <div id="socialMedia">
+                <a href="https://www.facebook.com/SunflowerClinicMassage">
+                    <img src="/images/FB.png" class="socialMediaBtn">
+                </a>
+                <a href="https://www.instagram.com/sunflowerclinicmassage/">
+                    <img src="/images/Insta.png" class="socialMediaBtn">
+                </a>
+                <a href="https://twitter.com/sunflowerclini1">
+                    <img src="/images/Twitter.png" class="socialMediaBtn">
+                </a>
+                <a href="https://www.yelp.com/biz/sunflower-clinic-olathe?osq=sunflower+clinic">
+                    <img src="/images/Yelp.png" class="socialMediaBtn">
+                </a>
+
+            </div>
+        </div>
+        <div class="footerItems">
+            <!--<div class="fb-page" data-href="https://www.facebook.com/Sunflowerclinicmassage" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Sunflowerclinicmassage" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Sunflowerclinicmassage">Sunflower Clinic</a></blockquote></div>-->
+        </div>
+    </div>
+
+
+</footer>
+</body>
+</html>
