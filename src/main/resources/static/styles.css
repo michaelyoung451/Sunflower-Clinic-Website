@@ -125,11 +125,9 @@ header{
     margin-bottom: 50px;
     padding: 0px;
     display: flex;
-}
-
-#about-us {
     background: #8db9cc;
 }
+
 
 #about-text {
     margin: 20px;
@@ -152,7 +150,6 @@ header{
 }
 
 #services-box {
-    background: #8db9cc;
     text-align: center;
     flex-direction: column;
 }
@@ -181,6 +178,15 @@ header{
 
 .modality-box:hover {
     transform: scale(1.25);
+}
+
+#our-process-text {
+    text-align: center;
+}
+
+.item img {
+    height: 600px;
+    width: 800px;
 }
 
 #contactInfo {
