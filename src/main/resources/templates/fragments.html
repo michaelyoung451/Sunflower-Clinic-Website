@@ -3,8 +3,8 @@
 <head th:fragment="head">
     <meta charset="UTF-8">
     <title>Sunflower Clinic</title>
-    <link rel="stylesheet" th:href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -13,9 +13,9 @@
 
 <header th:fragment="header">
     <a href="/"><img id="logo" src="/images/Clinic-Logo.png" alt="Sunflower Clinic Logo"/></a>
-    <div class="container" id="side_header">
-        <div id="slogan" class="container"><h1>You deserve the best treatment.</h1></div>
-        <div id="navbar" class="container">
+    <div id="side_header">
+        <div id="slogan"><h1 style="text-align:center">You deserve the best treatment.</h1></div>
+        <div id="navbar">
             <div th:replace=" fragments :: navOptions" id="navList"></div>
         </div>
     </div>
@@ -195,6 +195,25 @@
                 </a>
 
             </div>
+        </div>
+
+        <div class="footer-items" id="newsletter-form">
+            <h3>Sign up to receive special offers!</h3>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd">
+                </div>
+                <button type="submit" class="btn btn-default">Keep me updated!</button>
+            </form>
         </div>
 
     </div>
