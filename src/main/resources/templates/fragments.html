@@ -20,10 +20,81 @@
 
 <div th:fragment="navOptions">
     <a class="btn" id="Home" href="/">Home</a>
+    <a class="btn" id="About">About</a>
     <a class="btn" id="Services" href="services">Services</a>
-    <a class="btn" id="Add-ons">Add-ons</a>
     <a class="btn" id="Contact">Contact Us</a>
-    <a class="btn" id="Call Now" href="tel: 913-242-0814">Call Now</a>
+</div>
+
+<div th:fragment="modalities-bar" class="main-content" id="modalities">
+    <div class="modality-box" id="customized-massage" onmouseover="document.getElementById('custom-massage-text').style.visibility = 'visible';">
+        <h2>Customized Massage</h2>
+        <img src="/images/stones.jpg" alt="Hot Stones"/>
+        <p id="custom-massage-text">You're body is unique, which is why we use a variety of techniques including Swedish, Deep Tissue, Trigger Point, and Sport Massage</p>
+    </div>
+    <div class="modality-box" id="prenatal-massage">
+        <h2>Prenatal Massage</h2>
+        <img src="/images/stones.jpg" alt="Hot Stones"/>
+        <p>We utilize state-of-the-art equipment to help relieve stress from expecting mothers, ensuring a smoother, healthier pregnancy.</p>
+    </div>
+    <div class="modality-box" id="cupping-therapy">
+        <h2>Cupping Therapy</h2>
+        <img src="/images/stones.jpg" alt="Hot Stones"/>
+        <p>Using suction to pull on the muscle tissue, Cupping Therapy provides a more localized treatment, as well as a safer way to treat soft tissue.</p>
+    </div>
+    <div class="modality-box" id="hot-stone">
+        <h2>Hot Stone Therapy</h2>
+        <img src="/images/stones.jpg" alt="Hot Stones"/>
+        <p>You're body is unique, which is why we use a variety of techniques including Swedish, Deep Tissue, Trigger Point, and Sport Massage</p>
+    </div>
+    <div class="modality-box" id="aromatherapy">
+        <h2>Aromatherapy</h2>
+        <img src="/images/stones.jpg" alt="Hot Stones"/>
+        <p>We utilize state-of-the-art equipment to help relieve stress from expecting mothers, ensuring a smoother, healthier pregnancy.</p>
+    </div>
+    <div class="modality-box" id="face-massage">
+        <h2>Face Massage</h2>
+        <img src="/images/stones.jpg" alt="Hot Stones"/>
+        <p>Using suction to pull on the muscle tissue, Cupping Therapy provides a more localized treatment, as well as a safer way to treat soft tissue.</p>
+    </div>
+    <div class="modality-box" id="foot-scrub">
+        <h2>Foot Scrub</h2>
+        <img src="/images/stones.jpg" alt="Hot Stones"/>
+        <p>Using suction to pull on the muscle tissue, Cupping Therapy provides a more localized treatment, as well as a safer way to treat soft tissue.</p>
+    </div>
+</div>
+
+<div id="hours-list" th:fragment="hours-list">
+    <h3>Hours of Operation</h3>
+    <table id="hours">
+        <tr>
+            <td>Monday</td>
+            <td>9:00 AM - 9:00 PM</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>Closed</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>9:00 AM - 9:00 PM</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>9:00 AM - 9:00 PM</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>9:00 AM - 9:00 PM</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>9:00 AM - 9:00 PM</td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>11:00 AM - 6:00 PM</td>
+        </tr>
+    </table>
 </div>
 
 <footer th:fragment="footer">
@@ -32,12 +103,7 @@
     <div class="container" id="footerBox">
 
         <div class="footerItems">
-            <div id="footerNav">
-                <li><a class="btn" href="/">Home</a></li>
-                <li><a class="btn" href="services">Services</a></li>
-                <li><a class="btn" >Add-ons</a></li>
-                <li><a class="btn" >Contact Us</a></li>
-            </div>
+            <div th:replace="fragments :: hours-list"></div>
         </div>
 
         <div class="footerItems" id="contactInfo">
@@ -62,9 +128,7 @@
 
             </div>
         </div>
-        <div class="footerItems">
-            <!--<div class="fb-page" data-href="https://www.facebook.com/Sunflowerclinicmassage" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Sunflowerclinicmassage" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Sunflowerclinicmassage">Sunflower Clinic</a></blockquote></div>-->
-        </div>
+
     </div>
 
 
