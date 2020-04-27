@@ -20,47 +20,72 @@
 
 <div th:fragment="navOptions">
     <a class="btn" id="Home" href="/">Home</a>
-    <a class="btn" id="About">About</a>
-    <a class="btn" id="Services" href="services">Services</a>
-    <a class="btn" id="Contact">Contact Us</a>
+    <a class="btn" id="About" href="#about-us">About</a>
+    <a class="btn" id="Services" href="#services-box">Services</a>
+    <a class="btn" id="Contact" href="#footer">Contact Us</a>
 </div>
 
-<div th:fragment="modalities-bar" class="main-content" id="modalities">
-    <div class="modality-box" id="customized-massage" onmouseover="document.getElementById('custom-massage-text').style.visibility = 'visible';">
-        <h2>Customized Massage</h2>
-        <img src="/images/stones.jpg" alt="Hot Stones"/>
-        <p id="custom-massage-text">You're body is unique, which is why we use a variety of techniques including Swedish, Deep Tissue, Trigger Point, and Sport Massage</p>
+<div th:fragment="services" class="main-content" id="services-box">
+    <h1>What We Offer</h1></br>
+    <div id="modality-bar">
+        <div class="modality-box" id="customized-massage"
+             onmouseenter="document.getElementById('custom-massage-text').style.visibility = 'visible';"
+             onmouseleave="document.getElementById('custom-massage-text').style.visibility = 'hidden';"
+        >
+            <h2>Customized Massage</h2>
+            <img src="/images/stones.jpg" alt="Hot Stones"/>
+            <p id="custom-massage-text">You're body is unique, which is why we use a variety of techniques including Swedish, Deep Tissue, Trigger Point, and Sport Massage</p>
+        </div>
+        <div class="modality-box" id="prenatal-massage"
+             onmouseenter="document.getElementById('prenatal-massage-text').style.visibility = 'visible';"
+             onmouseleave="document.getElementById('prenatal-massage-text').style.visibility = 'hidden';"
+        >
+            <h2>Prenatal Massage</h2>
+            <img src="/images/stones.jpg" alt="Hot Stones"/>
+            <p id="prenatal-massage-text">We utilize state-of-the-art equipment to help relieve stress from expecting mothers, ensuring a smoother, healthier pregnancy.</p>
+        </div>
+        <div class="modality-box" id="cupping-therapy"
+             onmouseenter="document.getElementById('cupping-therapy-text').style.visibility = 'visible';"
+             onmouseleave="document.getElementById('cupping-therapy-text').style.visibility = 'hidden';"
+        >
+            <h2>Cupping Therapy</h2>
+            <img src="/images/stones.jpg" alt="Hot Stones"/>
+            <p id="cupping-therapy-text">Using suction to pull on the muscle tissue, Cupping Therapy provides a more localized treatment, as well as a safer way to treat soft tissue.</p>
+        </div>
+        <div class="modality-box" id="hot-stone"
+             onmouseenter="document.getElementById('hot-stone-text').style.visibility = 'visible';"
+             onmouseleave="document.getElementById('hot-stone-text').style.visibility = 'hidden';"
+        >
+            <h2>Hot Stone Therapy</h2>
+            <img src="/images/stones.jpg" alt="Hot Stones"/>
+            <p id="hot-stone-text">You're body is unique, which is why we use a variety of techniques including Swedish, Deep Tissue, Trigger Point, and Sport Massage</p>
+        </div>
+        <div class="modality-box" id="aromatherapy"
+             onmouseenter="document.getElementById('aromatherapy-text').style.visibility = 'visible';"
+             onmouseleave="document.getElementById('aromatherapy-text').style.visibility = 'hidden';"
+        >
+            <h2>Aroma Therapy</h2>
+            <img src="/images/stones.jpg" alt="Hot Stones"/>
+            <p id="aromatherapy-text">We utilize state-of-the-art equipment to help relieve stress from expecting mothers, ensuring a smoother, healthier pregnancy.</p>
+        </div>
+        <div class="modality-box" id="face-massage"
+             onmouseenter="document.getElementById('face-massage-text').style.visibility = 'visible';"
+             onmouseleave="document.getElementById('face-massage-text').style.visibility = 'hidden';"
+        >
+            <h2>Face Massage</h2>
+            <img src="/images/stones.jpg" alt="Hot Stones"/>
+            <p id="face-massage-text">Using suction to pull on the muscle tissue, Cupping Therapy provides a more localized treatment, as well as a safer way to treat soft tissue.</p>
+        </div>
+        <div class="modality-box" id="foot-scrub"
+             onmouseenter="document.getElementById('foot-scrub-text').style.visibility = 'visible';"
+             onmouseleave="document.getElementById('foot-scrub-text').style.visibility = 'hidden';"
+        >
+            <h2>Foot</br>Scrub</h2>
+            <img src="/images/stones.jpg" alt="Hot Stones"/>
+            <p id="foot-scrub-text">Using suction to pull on the muscle tissue, Cupping Therapy provides a more localized treatment, as well as a safer way to treat soft tissue.</p>
+        </div>
     </div>
-    <div class="modality-box" id="prenatal-massage">
-        <h2>Prenatal Massage</h2>
-        <img src="/images/stones.jpg" alt="Hot Stones"/>
-        <p>We utilize state-of-the-art equipment to help relieve stress from expecting mothers, ensuring a smoother, healthier pregnancy.</p>
-    </div>
-    <div class="modality-box" id="cupping-therapy">
-        <h2>Cupping Therapy</h2>
-        <img src="/images/stones.jpg" alt="Hot Stones"/>
-        <p>Using suction to pull on the muscle tissue, Cupping Therapy provides a more localized treatment, as well as a safer way to treat soft tissue.</p>
-    </div>
-    <div class="modality-box" id="hot-stone">
-        <h2>Hot Stone Therapy</h2>
-        <img src="/images/stones.jpg" alt="Hot Stones"/>
-        <p>You're body is unique, which is why we use a variety of techniques including Swedish, Deep Tissue, Trigger Point, and Sport Massage</p>
-    </div>
-    <div class="modality-box" id="aromatherapy">
-        <h2>Aromatherapy</h2>
-        <img src="/images/stones.jpg" alt="Hot Stones"/>
-        <p>We utilize state-of-the-art equipment to help relieve stress from expecting mothers, ensuring a smoother, healthier pregnancy.</p>
-    </div>
-    <div class="modality-box" id="face-massage">
-        <h2>Face Massage</h2>
-        <img src="/images/stones.jpg" alt="Hot Stones"/>
-        <p>Using suction to pull on the muscle tissue, Cupping Therapy provides a more localized treatment, as well as a safer way to treat soft tissue.</p>
-    </div>
-    <div class="modality-box" id="foot-scrub">
-        <h2>Foot Scrub</h2>
-        <img src="/images/stones.jpg" alt="Hot Stones"/>
-        <p>Using suction to pull on the muscle tissue, Cupping Therapy provides a more localized treatment, as well as a safer way to treat soft tissue.</p>
-    </div>
+
 </div>
 
 <div id="hours-list" th:fragment="hours-list">
@@ -97,7 +122,7 @@
     </table>
 </div>
 
-<footer th:fragment="footer">
+<footer th:fragment="footer" id="footer">
 
     <h1 style="text-align: center">Contact Us</h1>
     <div class="container" id="footerBox">

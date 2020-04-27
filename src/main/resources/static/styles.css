@@ -151,8 +151,15 @@ header{
     padding: 0px;
 }
 
-#modalities {
+#services-box {
+    background: #8db9cc;
+    text-align: center;
+    flex-direction: column;
+}
+
+#modality-bar {
     justify-content: center;
+    display: flex;
 }
 .modality-box {
     margin: 0px;
