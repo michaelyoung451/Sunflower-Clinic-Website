@@ -53,6 +53,14 @@ header{
     flex-direction: column;
 }
 
+#loginLinksContainer {
+    text-align: right;
+}
+
+.loginLinks {
+    margin-right: 10px;
+}
+
 #slogan {
     flex: 1;
     justify-content: center;
@@ -232,8 +240,8 @@ footer {
 
 .footerItems {
     display: flex;
-    flex: 1;
-    margin: 0px;
+    width: 33%;
+    margin: auto;
     flex-direction: column;
     justify-content: center;
     align-content: stretch;

@@ -14,6 +14,10 @@
 <header th:fragment="header">
     <a href="/"><img id="logo" src="/images/Clinic-Logo.png" alt="Sunflower Clinic Logo"/></a>
     <div id="side_header">
+        <div id="loginLinksContainer">
+            <a class="loginLinks" href="/register">Register</a>
+            <a class="loginLinks" href="/login">Login</a>
+        </div>
         <div id="slogan"><h1 style="text-align:center">You deserve the best treatment.</h1></div>
         <div id="navbar">
             <div th:replace=" fragments :: navOptions" id="navList"></div>
@@ -32,7 +36,11 @@
 <div th:fragment="services" class="main-content" id="services-box">
     <h1>What We Offer</h1></br>
     <div id="modality-bar">
-        <div class="modality-box" id="customized-massage"
+        <th:block th:each="modality : ${modalities}">
+            <p th:text="${modality.name}">Default text</p>
+
+        </th:block>
+        <!--<div class="modality-box" id="customized-massage"
              onmouseenter="document.getElementById('custom-massage-text').style.visibility = 'visible';"
              onmouseleave="document.getElementById('custom-massage-text').style.visibility = 'hidden';"
         >
@@ -87,7 +95,7 @@
             <h2>Foot</br>Scrub</h2>
             <img src="/images/stones.jpg" alt="Hot Stones"/>
             <p id="foot-scrub-text">Using suction to pull on the muscle tissue, Cupping Therapy provides a more localized treatment, as well as a safer way to treat soft tissue.</p>
-        </div>
+        </div>-->
     </div>
 
 </div>
