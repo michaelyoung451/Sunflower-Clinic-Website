@@ -166,26 +166,26 @@ header{
     justify-content: center;
     display: flex;
 }
-.modality-box {
-    margin: 0px;
-    padding: 10px;
-    background-color: white;
-    text-align: center;
-    font-family: arial;
 
+.modality-box {
+    background-color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.modality-box img {
+.modality-box h3{
+    height: 50px;
+}
+
+.modality-box img{
     width: 100%;
+    align-items: center;
+
 }
 
 .modality-box p {
-    visibility: hidden;
-    height: 0px;
-}
 
-.modality-box:hover {
-    transform: scale(1.25);
 }
 
 #our-process-text {

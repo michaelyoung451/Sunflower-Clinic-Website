@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
+    private ModalityData modalityData = new ModalityData();
 
     @GetMapping("")
     public String index(Model model) {
-        model.addAttribute("modalities", ModalityData.getAll());
+        modalityData.addModalities();
+        model.addAttribute("modalities", modalityData.getAll());
         return "index";
     }
 

@@ -16,7 +16,7 @@ public class ModalityData {
     public static Modality faceMassage = new Modality("Face Massage", "A focused massage for the facial muscles that relieves tension, drains bloating, and provides healthier and more radiant skin.");
     public static Modality footScrub = new Modality("Foot Scrub", "A foot scrub is applied to the feet to help remove and exfoliate the dry, rough areas of your feet.");
 
-    public static void main (String[] args) {
+    public Map<Integer, Modality> addModalities() {
         modalities.put(0, customMassage);
         modalities.put(1, prenatalMassage);
         modalities.put(2, cuppingTherapy);
@@ -24,6 +24,7 @@ public class ModalityData {
         modalities.put(4, aromatherapy);
         modalities.put(5, faceMassage);
         modalities.put(6, footScrub);
+        return modalities;
     }
 
     public static Collection<Modality> getAll() {
