@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th='http://www.thymeleaf.org/'>
-<head th:replace="fragments :: head">
-</head>
-<body>
-    <div th:replace="fragments :: header"></div>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body style="background-image: url(/images/Sunflower-Girl.jpg">
 
 
-            <div class="login-container">
+
+        <div th:replace="fragments :: header"></div>
+        <div id="body-container" style="height: 500px;">
+            <div id="main">
+
+                <div class="main-content">
                 <form>
                     <div class="form-group">
                         <label for="email">Email address:</label>
@@ -20,7 +23,16 @@
                 </form>
             </div>
 
-    <div th:replace="fragments :: footer"></div>
+
+
+            </div>
+        </div>
+
+        <footer th:replace="fragments :: footer"></footer>
+    </div>
+</div>
+
+
 
 </body>
 </html>
