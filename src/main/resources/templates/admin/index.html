@@ -7,6 +7,20 @@
 <body>
     <div th:replace="fragments :: header"></div>
 
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+        </tr>
+        </thead>
+        <tr th:each="prospect: ${prospects}">
+            <td th:text="${prospect.name"></td>
+            <td th:text="${prospect.email"></td>
+            <td th:text="${prospect.phoneNumber"></td>
+        </tr>
+    </table>
 
     <div th:replace="fragments :: header"></div>
 </body>

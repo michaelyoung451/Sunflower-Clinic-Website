@@ -152,21 +152,29 @@
         </div>
 
         <div class="footer-items" id="newsletter-form">
-            <h3>Sign up to receive special offers!</h3>
-            <form>
+            <h3>Sign up for more information!</h3>
+            <form method="post" action="index">
                 <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" class="form-control" id="name">
+                    <label>Name:
+                        <input th:field="${prospect.name}" class="form-control">
+                    </label>
+                    <p class="errors" th:errors="${prospect.name}"></p>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email address:</label>
-                    <input type="email" class="form-control" id="email">
+                    <label>Email address:
+                        <input th:field="${prospect.email}" class="form-control">
+                    </label>
+                    <p class="errors" th:errors="${prospect.email}"></p>
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" id="pwd">
+                    <label>Phone Number:
+                        <input th:field="${prospect.phoneNumber}" class="form-control">
+                    </label>
+                    <p class="errors" th:errors="${prospect.phoneNumber}"></p>
                 </div>
-                <button type="submit" class="btn btn-default">Keep me updated!</button>
+                <div class="form-group">
+                    <input type="submit" value="Keep me updated!" class="btn btn-success">
+                </div>
             </form>
         </div>
 
