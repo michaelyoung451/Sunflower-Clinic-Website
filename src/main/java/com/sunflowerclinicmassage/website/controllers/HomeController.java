@@ -30,14 +30,14 @@ public class HomeController {
         return "index";
     }
 
-    @PostMapping("")
+    @PostMapping("index")
     public String processNewProspect(@ModelAttribute @Valid Prospect newProspect,
                                      Errors errors, Model model) {
         if(errors.hasErrors()) {
-            return "";
+            return "index";
         }
         prospectRepository.save(newProspect);
-        return "";
+        return "redirect:";
 
     }
 
