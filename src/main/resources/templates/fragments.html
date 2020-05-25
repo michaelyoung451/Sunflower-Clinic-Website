@@ -37,8 +37,8 @@
     <h1>What We Offer</h1>
     <div id="modality-bar">
         <div class="modality-box" th:each="modality : ${modalities}">
-            <img src="/images/stones.jpg"/>
-            <h4 th:text="${modality.name}">Default text</h4></br>
+            <img th:src="${modality.photoPath}"/>
+            <h4 th:text="${modality.name}"></h4>
             <p th:text="${modality.shortDescription}"></p>
         </div>
 

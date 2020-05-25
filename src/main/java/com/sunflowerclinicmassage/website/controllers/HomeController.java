@@ -2,19 +2,22 @@ package com.sunflowerclinicmassage.website.controllers;
 
 import com.sunflowerclinicmassage.website.data.ModalityData;
 import com.sunflowerclinicmassage.website.data.ProspectRepository;
+import com.sunflowerclinicmassage.website.models.InfoRequestEmail;
 import com.sunflowerclinicmassage.website.models.Prospect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
 import javax.validation.Valid;
 
 @Controller
 public class HomeController {
+
+    @Autowired
+    private InfoRequestEmail infoRequestEmail;
 
     @Autowired
     private ProspectRepository prospectRepository;
@@ -32,11 +35,19 @@ public class HomeController {
 
     @PostMapping("index")
     public String processNewProspect(@ModelAttribute @Valid Prospect newProspect,
-                                     Errors errors, Model model) {
+                                     Errors errors, Model model) throws MessagingException {
+
         if(errors.hasErrors()) {
-            return "index";
+            return "";
         }
         prospectRepository.save(newProspect);
+        String to = "sunflowerclinicmassage@gmail.com";
+        String from = newProspect.getEmail();
+        String requester = newProspect.getName();
+        String subject = "Information Request for " + newProspect.getName();
+        String body = requester + " would like more information.\n\nPhone Number: " + newProspect.getPhoneNumber() + "\nEmail: " + newProspect.getEmail();
+
+        infoRequestEmail.sendRequestEmail(to, from, subject, body);
         return "redirect:";
 
     }

@@ -5,12 +5,22 @@ public class Modality {
 
     private String name;
     private String shortDescription;
+    private String photoPath;
     //private String longDescription;
 
-    public Modality(String name, String shortDescription/*, String longDescription*/) {
+    public Modality(String name, String shortDescription, String photoPath/*, String longDescription*/) {
         this.name = name;
         this.shortDescription = shortDescription;
+        this.photoPath = photoPath;
         //this.longDescription = longDescription;
+    }
+
+    public String getPhotoPath() {
+        return photoPath;
+    }
+
+    public void setPhotoPath(String photoPath) {
+        this.photoPath = photoPath;
     }
 
     public String getName() {
@@ -42,6 +52,7 @@ public class Modality {
         return "Modality{" +
                 "name='" + name + '\'' +
                 ", shortDescription='" + shortDescription + '\'' +
+                ", photoPath='" + photoPath + '\'' +
                 //", longDescription='" + longDescription + '\'' +
                 '}';
     }

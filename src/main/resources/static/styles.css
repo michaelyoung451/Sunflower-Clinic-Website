@@ -124,18 +124,38 @@ header{
 }
 
 #main {
-    width: 80%;
     margin: auto;
 }
 
 .main-content {
     margin-top: 50px;
     margin-bottom: 50px;
-    padding: 0px;
-    display: flex;
-    background: #8db9cc;
+    padding: 0;
+    background-color: rgba(141, 185, 204, .75);
 }
 
+#splash-ad {
+    padding: 50px;
+    justify-content: center;
+}
+
+#splash-text {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+#splash-text span {
+    font-size: 200px;
+    color: red;
+}
+
+#about-us {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+}
 
 #about-text {
     margin: 20px;
@@ -159,33 +179,70 @@ header{
 
 #services-box {
     text-align: center;
-    flex-direction: column;
 }
 
 #modality-bar {
     justify-content: center;
     display: flex;
+    margin: auto;
+
 }
 
 .modality-box {
-    background-color: white;
     flex: 1;
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+    position: relative;
+    align-self: flex-end;
 }
 
-.modality-box h3{
-    height: 50px;
+.modality-box h4{
+    background-color: white;
+    margin: 0px;
+    padding: 10px;
 }
 
 .modality-box img{
     width: 100%;
+    height: 125px;
     align-items: center;
 
 }
 
 .modality-box p {
+    display: none;
+    position: absolute;
+}
 
+.modality-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.modality-box:hover p {
+    display: block;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 1;
+    animation: growDown 600ms ease-in-out;
+    transform-origin: top center;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+#our-process {
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
 }
 
 #our-process-text {
