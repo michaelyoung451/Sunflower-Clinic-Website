@@ -2,16 +2,16 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head th:replace="fragments :: head"></head>
 <body>
-<div class="parallax">
-    <div class="parallax__layer parallax__layer--back">
-        <img src="/images/Sunflower-Girl.jpg" id="backImg">
-    </div>
-    <div class="parallax__layer parallax__layer--base">
+
     <div th:replace="fragments :: header"></div>
     <div id="body-container">
         <div id="main">
-            <div class="main-content" id="splash-ad">
-                <img src="/images/Splash-ad.png" alt="New Client Special only $58">
+            <div id="banner">
+                <img id="banner-background" src="/images/banner.png" alt="New Client Special only $58"/>
+                <div id="banner-content">
+                    <img id="logo" src="/images/Clinic-Logo.png" alt="Sunflower Clinic Logo"/>
+                    <h1 id="banner-text">GET YOUR FIRST</br>MASSAGE FOR ONLY</br><span>$50</span></h1>
+                </div>
             </div>
             <div class="main-content" id="about-us">
                 <div id="about-text">

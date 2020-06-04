@@ -12,26 +12,12 @@
 <body>
 
 <header th:fragment="header">
-    <a href="/"><img id="logo" src="/images/Clinic-Logo.png" alt="Sunflower Clinic Logo"/></a>
-    <div id="side_header">
-        <div id="loginLinksContainer">
-            <a class="loginLinks" href="/register">Register</a>
-            <a class="loginLinks" href="/login">Login</a>
-        </div>
-        <div id="slogan"><h1 style="text-align:center">You deserve the best treatment.</h1></div>
-        <div id="navbar">
-            <div th:replace=" fragments :: navOptions" id="navList"></div>
-        </div>
+    <h1 id="slogan">You deserve the best treatment.</h1>
+    <div id="contactLinksContainer">
+        <a class="contactLinks" href="tel: 913-242-0814">Call Now</a>
+        <a class="contactLinks" href="https://g.page/sunflower-clinic/review?gm">Review</a>
     </div>
 </header>
-
-<div th:fragment="navOptions">
-    <a class="btn" id="Home" href="/">Home</a>
-    <a class="btn" id="About" href="#about-us">About</a>
-    <a class="btn" id="Services" href="#services-box">Services</a>
-    <a class="btn" id="Process" href="#our-process">Process</a>
-    <a class="btn" id="Contact" href="#footer">Contact Us</a>
-</div>
 
 <div th:fragment="services" class="main-content" id="services-box">
     <h1>What We Offer</h1>
