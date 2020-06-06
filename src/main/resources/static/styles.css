@@ -14,48 +14,74 @@ html, body, {
 
 
 header {
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    background-color: rgba(141, 185, 204, .75);
+    background-color: rgba(141, 185, 204, 1);
     background-size: 100%;
     margin: 0px;
     padding: 0px;
     z-index: 3;
 }
 
+.header-element {
+    flex:1;
+    display: flex;
+    justify-content: center;
+}
+
+#slogan-container {
+    position: relative;
+    left: -100px;
+}
+
+#slogan {
+    font-family: 'Dancing Script';
+    color: #4c4c4c;
+}
+
+#logo-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 150px;
+    z-index: 5;
+}
+#logo {
+    height: 225px;
+    width: 400px;
+    margin: auto;
+    margin-bottom: 25px;
+    z-index: 5;
+}
+
 #contactLinksContainer {
-    position: fixed;
-    right: 0;
-    top: 30px;
+    position: relative;
+    flex: 1;
+    right: -100px;
 }
 
 .contactLinks {
     margin-right: 10px;
-    background-color: #f7df1d;
     padding: 10px;
     border-radius: 5px;
+    color: white;
+
 }
 
 .contactLinks a {
     margin: auto;
     font-family: arial;
-    text-style: none;
-    color: black;
+    text-decoration-style: none;
+    color: white;
 }
 
-.contactLinks a:hover {
-    text-style: none;
-    color: green;
-}
-
-#slogan {
-    position: relative;
-    left: 10px;
-    font-family: 'Dancing Script';
-    color: #4c4c4c;
+.contactLinks:hover {
+    text-decoration: none;
+    background-color: #1dd900;
+    color: white;
 }
 
 #main {
@@ -70,17 +96,13 @@ header {
 }
 
 #banner {
-    position: absolute;
-    margin-top: 0;
+    position: relative;
+    margin-top: -500px;
     z-index: 1;
     text-align: center;
 }
 
-#logo {
-    height: 250px;
-    width: 400px;
-    margin: auto;
-}
+
 
 #banner-background {
     position: relative;
@@ -90,15 +112,15 @@ header {
 
 #banner-content {
     position: relative;
-    z-index: 2;
-    top: -750px;
+    z-index: 6;
+    top: -500px;
 }
 
 #banner-text {
-    margin-top: 10px;
+    margin: auto;
     color: #4c4c4c;
     font-size: 50px;
-
+    text-align: center;
 }
 
 #banner-text span {
@@ -106,11 +128,19 @@ header {
     font-size: 150px;
 }
 
+#info-container {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
 #about-us {
     display: flex;
-    width: 80%;
+    flex: 1;
     margin: auto;
     border-radius: 20px;
+    top: -300px;
 }
 
 #about-text {
@@ -126,11 +156,32 @@ header {
     font-size: large;
 }
 
-#about-us img {
-    flex: 1;
-    width: 33%;
-    margin: 20px;
-    padding: 0px;
+#our-process {
+    flex: 2;
+    margin: auto;
+    border-radius: 20px;
+}
+
+#our-process-text {
+    text-align: center;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.carousel-img {
+    height: 600px;
+    width: 810px;
+    margin: 0;
+    padding: 0;
+    flex: 2;
+}
+
+.carousel-caption {
+
 }
 
 #services-box {
@@ -138,18 +189,27 @@ header {
 }
 
 #modality-bar {
+    width: 80%;
     justify-content: center;
     display: flex;
     margin: auto;
+}
 
+#addon-bar {
+    width: 80%;
+    justify-content: center;
+    display: flex;
+    margin: auto;
 }
 
 .modality-box {
+    margin: 25px;
     flex: 1;
     display: inline-block;
     position: relative;
     align-self: flex-end;
 }
+
 
 .modality-box h4{
     background-color: white;
@@ -159,9 +219,12 @@ header {
 
 .modality-box img{
     width: 100%;
-    height: 125px;
+    height: 175px;
     align-items: center;
+}
 
+#addon-box img{
+    height: 125px;
 }
 
 .modality-box p {
@@ -195,40 +258,6 @@ header {
     }
 }
 
-#our-process {
-    width: 80%;
-    margin: auto;
-    border-radius: 20px;
-}
-
-#our-process-text {
-    text-align: center;
-}
-
-.item {
-    display: flex;
-    flex-direction: row;
-    background-color: red;
-    align-items: center;
-}
-
-.carousel-img {
-    height: 600px;
-    width: 800px;
-    margin: 0;
-    padding: 0;
-    flex: 2;
-}
-
-.carousel-caption {
-    left: auto;
-    right: 0;
-    padding: 10px;
-
-}
-
-
-
 #contactInfo {
     flex: 1;
 }
@@ -238,15 +267,6 @@ header {
     padding: 0;
     order: 3;
 }
-
-#newsfeed {
-    flex: 1;
-}
-
-#welcome {
-    flex: 2;
-}
-
 
 @media (min-width: 900px) {
     .container {
@@ -260,10 +280,9 @@ header {
 
 footer {
 
-    background-color: #fffc54;
+    background-color: rgba(141, 185, 204, 1);
 }
 #footerBox {
-    width: 80%;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -272,7 +291,6 @@ footer {
 
 .footerItems {
     display: flex;
-    width: 33%;
     margin: auto;
     flex-direction: column;
     justify-content: center;
@@ -290,24 +308,6 @@ footer {
 
 #hours {
     margin: auto;
-}
-
-#footerNav {
-    height: 100%;
-    flex: display;
-    flex-direction: column;
-    align-content: stretch;
-    text-align: center;
-}
-
-#footerNav li {
-    list-style-type: none;
-    margin: 0px;
-}
-
-#footerNav li a {
-    display: inline-block;
-    width: 100%
 }
 
 #socialMedia {

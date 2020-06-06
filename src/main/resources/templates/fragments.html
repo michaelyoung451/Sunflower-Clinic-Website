@@ -12,10 +12,16 @@
 <body>
 
 <header th:fragment="header">
-    <h1 id="slogan">You deserve the best treatment.</h1>
-    <div id="contactLinksContainer">
-        <a class="contactLinks" href="tel: 913-242-0814">Call Now</a>
-        <a class="contactLinks" href="https://g.page/sunflower-clinic/review?gm">Review</a>
+    <div id="slogan-container" class="header-element">
+        <h1 id="slogan">You deserve the best treatment.</h1>
+    </div>
+    <!--div id="logo-container" class="header-element">
+        <img id="logo" src="/images/Clinic-Logo.png" alt="Sunflower Clinic Logo"/>
+    </div-->
+    <div id="contactLinksContainer" class="header-element">
+        <a style="background-color: blue" class="contactLinks" href="https://square.site/book/ZS4B8AHM8Y9DQ/sunflower-clinic-olathe-ks">Book Appointment</a>
+        <a style="background-color: green" class="contactLinks" href="tel: 913-242-0814">Call Now</a>
+        <a style="background-color: red" class="contactLinks" href="https://g.page/sunflower-clinic/review?gm">Review</a>
     </div>
 </header>
 
@@ -29,12 +35,18 @@
         </div>
 
     </div>
-
+    <h1>Add-ons</h1>
+    <div id="addon-bar">
+        <div id="addon-box" class="modality-box" th:each="addon : ${addons}">
+            <img th:src="${addon.photoPath}"/>
+            <h4 th:text="${addon.name}"></h4>
+            <p th:text="${addon.shortDescription}"></p>
+        </div>
+    </div>
 </div>
 
 <div th:fragment="our-process" id="our-process" class="main-content">
         <div id="our-process-text">
-            <h1>Our Process</h1>
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">

@@ -1,5 +1,6 @@
 package com.sunflowerclinicmassage.website.controllers;
 
+import com.sunflowerclinicmassage.website.data.AddonData;
 import com.sunflowerclinicmassage.website.data.ModalityData;
 import com.sunflowerclinicmassage.website.data.ProspectRepository;
 import com.sunflowerclinicmassage.website.models.InfoRequestEmail;
@@ -23,11 +24,14 @@ public class HomeController {
     private ProspectRepository prospectRepository;
 
     private ModalityData modalityData = new ModalityData();
+    private AddonData addonData = new AddonData();
 
     @GetMapping("")
     public String index(Model model) {
         modalityData.addModalities();
+        addonData.addAddons();
         model.addAttribute("modalities", modalityData.getAll());
+        model.addAttribute("addons", addonData.getAll());
         model.addAttribute(new Prospect());
         model.addAttribute("prospects", prospectRepository.findAll());
         return "index";

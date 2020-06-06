@@ -4,27 +4,30 @@
 <body>
 
     <div th:replace="fragments :: header"></div>
+    <div id="logo-container">
+        <img id="logo" src="/images/Clinic-Logo.png" alt="Sunflower Clinic Logo"/>
+        <h1 id="banner-text">GET YOUR FIRST</br>MASSAGE FOR ONLY</br><span>$50</span></h1>
+    </div>
     <div id="body-container">
         <div id="main">
             <div id="banner">
                 <img id="banner-background" src="/images/banner.png" alt="New Client Special only $58"/>
                 <div id="banner-content">
-                    <img id="logo" src="/images/Clinic-Logo.png" alt="Sunflower Clinic Logo"/>
-                    <h1 id="banner-text">GET YOUR FIRST</br>MASSAGE FOR ONLY</br><span>$50</span></h1>
+
                 </div>
             </div>
-            <div class="main-content" id="about-us">
-                <div id="about-text">
-                    <h1>About Us</h1>
-                    <p>
-                        At Sunflower Clinic, we know that every client has different goals for their massage experience.  We are dedicated to understanding your personal needs in order to work with you to reach those goals. Massage treatments have a host of benefits, such as reducing stress and anxiety, improving sleep and circulation, and relaxing muscles; but no matter what your reason for seeking a massage, we’re here to give you the very best treatment.
-                    </p>
+            <div id="info-container">
+                <div id="about-us">
+                    <div id="about-text">
+                        <h1>About Us</h1>
+                        <p>
+                            At Sunflower Clinic, we know that every client has different goals for their massage experience.  We are dedicated to understanding your personal needs in order to work with you to reach those goals. Massage treatments have a host of benefits, such as reducing stress and anxiety, improving sleep and circulation, and relaxing muscles; but no matter what your reason for seeking a massage, we’re here to give you the very best treatment.
+                        </p>
+                    </div>
                 </div>
-                <img src="/images/stones.jpg" alt="Hot Stones"/>
+                <div th:replace="fragments :: our-process"></div>
             </div>
             <div th:replace="fragments :: services"></div>
-            <div th:replace="fragments :: our-process"></div>
-
 
         </div>
     </div>
