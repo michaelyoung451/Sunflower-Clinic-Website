@@ -1,5 +1,5 @@
 * {
-  box-sizing: inherit;
+  box-sizing: border-box;
   transition-property: all;
   transition-duration: .6s;
   transition-timing-function: ease;
@@ -89,8 +89,8 @@ header {
 }
 
 .main-content {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     padding: 0;
     background-color: rgba(141, 185, 204, .75);
 }
@@ -168,8 +168,8 @@ header {
 
 .item {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .carousel-img {
@@ -181,7 +181,10 @@ header {
 }
 
 .carousel-caption {
-
+    left: 0px;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    width: 100%;
 }
 
 #services-box {
@@ -203,7 +206,7 @@ header {
 }
 
 .modality-box {
-    margin: 25px;
+    margin: 0px 25px 25px 25px;
     flex: 1;
     display: inline-block;
     position: relative;
@@ -260,12 +263,37 @@ header {
 
 #contactInfo {
     flex: 1;
+    margin: 25px;
 }
 
 #map {
-    flex: 1;
+    display: flex;
+    width: 80%;
+    margin: auto;
     padding: 0;
-    order: 3;
+}
+
+#map iframe {
+    margin-right: 50px;
+}
+
+.map-line {
+    margin: 25px;
+    flex: 1;
+}
+
+.form-control {
+    width: 350px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+#newsletter-form {
+    margin-right: 50px;
+    margin-left: 50px;
+
 }
 
 @media (min-width: 900px) {
@@ -300,14 +328,6 @@ footer {
 .footerItems p {
     text-align: center;
     font-family: arial;
-}
-
-#hours-list {
-    text-align: center;
-}
-
-#hours {
-    margin: auto;
 }
 
 #socialMedia {

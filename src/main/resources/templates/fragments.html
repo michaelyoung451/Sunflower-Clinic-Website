@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th='http://www.thymeleaf.org/'>
 <head th:fragment="head">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunflower Clinic</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" th:href="styles.css">
@@ -58,26 +59,26 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img class="carousel-img" src="/images/Front Desk.jpg" alt="Front Desk">
+                        <img class="carousel-img" src="/images/Front Desk.jpg" alt="Front Desk"/>
                         <div class="carousel-caption">
                             <h2 class="carousel-text-header">Assessment</h2>
-                            <p class="carousel-text-p">From the moment you arrive at our clinic, we're ready to help you </p>
+                            <p class="carousel-text-p">As soon as you arrive, our mission is to help you. We listen to how you are feeling, which parts of your body need the most attention, and what are you therapy goals.</p>
                         </div>
                     </div>
 
                     <div class="item">
-                        <img class="carousel-img" src="/images/Lobby.jpg" alt="Lobby">
+                        <img class="carousel-img" src="/images/Therapy Room.jpg" alt="Therapy Room"/>
                         <div class="carousel-caption">
                             <h2 class="carousel-text-header">Treatment</h2>
-                            <p class="carousel-text-p"></p>
+                            <p class="carousel-text-p">Using the information you provide, we customize your treatment to focus on your specific needs using a wide variety of massage techniques.</p>
                         </div>
                     </div>
 
                     <div class="item">
-                        <img class="carousel-img" src="/images/Therapy Room.jpg" alt="Therapy Room">
+                        <img class="carousel-img" src="/images/Lobby.jpg" alt="Lobby"/>
                         <div class="carousel-caption">
                             <h2 class="carousel-text-header">Review</h2>
-                            <p class="carousel-text-p"></p>
+                            <p class="carousel-text-p">Once the treatment is completed, we use what we find to advise you on a plan of action so that you continue to feel your best.</p>
                         </div>
                     </div>
                 </div>
@@ -129,21 +130,37 @@
     </table>
 </div>
 
-<footer th:fragment="footer" id="footer">
+<div id="newsletter-form" th:fragment="contact-form">
+    <h3>Sign up for more information!</h3>
+    <form method="post" action="index">
+        <div class="form-group">
+            <label>Name:
+                <input th:field="${prospect.name}" class="form-control">
+            </label>
+            <p class="errors" th:errors="${prospect.name}"></p>
+        </div>
+        <div class="form-group">
+            <label>Email address:
+                <input th:field="${prospect.email}" class="form-control">
+            </label>
+            <p class="errors" th:errors="${prospect.email}"></p>
+        </div>
+        <div class="form-group">
+            <label>Phone Number:
+                <input th:field="${prospect.phoneNumber}" class="form-control">
+            </label>
+            <p class="errors" th:errors="${prospect.phoneNumber}"></p>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Keep me updated!" class="btn btn-success">
+        </div>
+    </form>
+</div>
 
-    <h1 style="text-align: center">Contact Us</h1>
+<footer th:fragment="footer" id="footer">
     <div class="container" id="footerBox">
 
-        <div class="footerItems">
-            <div th:replace="fragments :: hours-list"></div>
-        </div>
-
         <div class="footerItems" id="contactInfo">
-            <p>601 N. Mur-Len Rd.</br>
-                Ste. 11A</br>
-                Olathe, KS 66062</p>
-            <p>(913) 242-0814</a>
-            <p>sunflowerclinicmassage@gmail.com</p>
             <div id="socialMedia">
                 <a href="https://www.facebook.com/SunflowerClinicMassage">
                     <img src="/images/FB.png" class="socialMediaBtn">
@@ -157,36 +174,11 @@
                 <a href="https://www.yelp.com/biz/sunflower-clinic-olathe?osq=sunflower+clinic">
                     <img src="/images/Yelp.png" class="socialMediaBtn">
                 </a>
-
+                <p>Copyright &copy 2020 Michael Young dba Sunflower Clinic</p>
             </div>
         </div>
 
-        <div class="footer-items" id="newsletter-form">
-            <h3>Sign up for more information!</h3>
-            <form method="post" action="index">
-                <div class="form-group">
-                    <label>Name:
-                        <input th:field="${prospect.name}" class="form-control">
-                    </label>
-                    <p class="errors" th:errors="${prospect.name}"></p>
-                </div>
-                <div class="form-group">
-                    <label>Email address:
-                        <input th:field="${prospect.email}" class="form-control">
-                    </label>
-                    <p class="errors" th:errors="${prospect.email}"></p>
-                </div>
-                <div class="form-group">
-                    <label>Phone Number:
-                        <input th:field="${prospect.phoneNumber}" class="form-control">
-                    </label>
-                    <p class="errors" th:errors="${prospect.phoneNumber}"></p>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Keep me updated!" class="btn btn-success">
-                </div>
-            </form>
-        </div>
+
 
     </div>
 
