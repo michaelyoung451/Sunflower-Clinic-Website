@@ -11,19 +11,12 @@ public class ModalityData {
     public static Modality customMassage = new Modality("Customized Massage", "You're body is unique, which is why we use a variety of techniques including Swedish, Deep Tissue, Trigger Point, and Sport Massage.", "/images/Deep-massage.jpeg");
     public static Modality prenatalMassage = new Modality("Prenatal Massage", "We utilize state-of-the-art equipment to help relieve stress from expecting mothers, ensuring a smoother, healthier pregnancy.", "/images/Prenatal.jpg");
     public static Modality cuppingTherapy = new Modality("Cupping Therapy", "Using suction to pull on the muscle tissue, Cupping Therapy provides a more localized treatment, as well as a safer way to treat soft tissue.", "/images/Cupping.jpg");
-    public static Modality hotStone = new Modality("Hot Stone Therapy", "Heated stones applied to the back help relieve tension in the muscles and make them more receptive to treatment.", "/images/hot-stone.png");
-    public static Modality aromatherapy = new Modality("Aromatherapy", "Aromatic essential oils are used medicinally to assist in calming nerves, easing tension, and relieving pain.", "/images/aromatherapy.jpg");
-    public static Modality faceMassage = new Modality("Face Massage", "A focused massage for the facial muscles that relieves tension, drains bloating, and provides healthier and more radiant skin.", "/images/Face-massage.jpg");
-    public static Modality footScrub = new Modality("Foot Scrub", "A foot scrub is applied to the feet to help remove and exfoliate the dry, rough areas of your feet.", "/images/Foot-Scrub.jpg");
 
     public Map<Integer, Modality> addModalities() {
         modalities.put(0, customMassage);
         modalities.put(1, prenatalMassage);
         modalities.put(2, cuppingTherapy);
-        modalities.put(3, hotStone);
-        modalities.put(4, aromatherapy);
-        modalities.put(5, faceMassage);
-        modalities.put(6, footScrub);
+
         return modalities;
     }
 
