@@ -43,6 +43,7 @@ html, body, {
   #contactLinks-box {
     display: contents;
   }
+
 }
 
 header {
@@ -109,7 +110,7 @@ header {
     flex-direction: column;
     position: relative;
     top: 150px;
-    z-index: 5;
+    z-index: 2;
 }
 #logo {
     height: 225px;
@@ -172,7 +173,6 @@ header {
 
 #about-us {
     display: flex;
-    flex: 1;
     margin: auto;
     border-radius: 20px;
     top: -300px;
@@ -192,7 +192,6 @@ header {
 }
 
 #our-process {
-    flex: 2;
     margin: auto;
     border-radius: 20px;
 }
@@ -339,6 +338,21 @@ header {
 
     #contactLinks-box {
         display: contents;
+    }
+
+    #our-process {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 1366px) {
+    #info-container {
+        flex-direction: column;
+    }
+
+    #about-us {
+        width: 100%;
     }
 
 }
