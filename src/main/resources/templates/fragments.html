@@ -39,7 +39,7 @@
     <div id="addon-bar">
         <div id="addon-box" class="modality-box" th:each="addon : ${addons}">
             <img th:src="${addon.photoPath}"/>
-            <h4 th:text="${addon.name}"></h4>
+            <h5 th:text="${addon.name}"></h5>
             <p th:text="${addon.shortDescription}"></p>
         </div>
     </div>

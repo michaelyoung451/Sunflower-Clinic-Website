@@ -249,10 +249,16 @@ header {
 
 
 .modality-box h4{
-    background-color: white;
-    margin: 0px;
-    padding: 10px;
-}
+     background-color: white;
+     margin: 0px;
+     padding: 10px;
+ }
+
+ .modality-box h5{
+     background-color: white;
+     margin: 0px;
+     padding: 10px;
+ }
 
 .modality-box img{
     width: 100%;
@@ -311,22 +317,14 @@ header {
     margin-right: 50px;
 }
 
-.map-line {
-    margin: 25px;
-    flex: 1;
-}
-
 .form-control {
-    width: 350px;
-}
-
-.form-group {
     width: 100%;
 }
 
-#newsletter-form {
-    margin-right: 50px;
-    margin-left: 50px;
+.form-group label {
+    width: 100%;
+}
+.form-group {
 
 }
 
@@ -341,6 +339,14 @@ header {
     }
 
     #our-process {
+        width: 100%;
+    }
+
+    #map {
+        flex-direction: column;
+    }
+
+    #map iframe {
         width: 100%;
     }
 
