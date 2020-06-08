@@ -27,7 +27,7 @@ html, body, {
 
 [class*="col-"] {
   float: left;
-  padding: 15px;
+  padding: 10px;
 }
 
 header {
@@ -378,7 +378,7 @@ footer {
 
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
 
     #slogan-container {
               display: none;
@@ -402,6 +402,10 @@ footer {
 
     #addon-bar {
         flex-wrap: wrap;
+    }
+
+    #addon-box {
+        width: 33%;
     }
 }
 
