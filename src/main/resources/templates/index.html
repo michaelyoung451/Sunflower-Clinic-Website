@@ -4,18 +4,10 @@
 <body>
 
     <div th:replace="fragments :: header"></div>
-    <div id="logo-container" class="">
-        <img id="logo" src="/images/Clinic-Logo.png" alt="Sunflower Clinic Logo"/>
-        <h1 id="banner-text">GET YOUR FIRST</br>MASSAGE FOR ONLY</br><span>$58</span></h1>
-    </div>
+
     <div id="body-container">
         <div id="main">
-            <div id="banner">
-                <img id="banner-background" src="/images/banner.png" alt="New Client Special only $58"/>
-                <div id="banner-content">
-
-                </div>
-            </div>
+            <div th:replace="fragments :: banner"></div>
             <div id="info-container">
                 <div id="about-us" class="col-4">
                     <div id="about-text">

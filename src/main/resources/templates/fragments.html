@@ -25,8 +25,16 @@
     </div>
 </header>
 
+<div th:fragment="banner" id="banner">
+    <div id="banner-content" class="col-12">
+        <img id="logo" src="/images/Clinic-Logo.png" alt="Sunflower Clinic Logo"/>
+        <h1 id="banner-text">GET YOUR FIRST</br>MASSAGE FOR ONLY</br><span>$58</span></h1>
+    </div>
+    <img id="banner-background" src="/images/banner.png" alt="New Client Special only $58"/>
+</div>
+
 <div th:fragment="services" id="services-box">
-    <h1>What We Offer</h1>
+    <h1 style="padding-top: 25px;">What We Offer</h1>
     <div id="modality-bar">
         <div id="modality-box" class="col-4" th:each="modality : ${modalities}">
             <img th:src="${modality.photoPath}"/>
