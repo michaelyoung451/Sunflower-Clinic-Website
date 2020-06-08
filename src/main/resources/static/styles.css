@@ -35,6 +35,14 @@ html, body, {
   [class*="col-"] {
     width: 100%;
   }
+
+  #slogan-container {
+          display: none;
+      }
+
+  #contactLinks-box {
+    display: contents;
+  }
 }
 
 header {
@@ -50,41 +58,29 @@ header {
     z-index: 3;
 }
 
-.header-element {
-    flex:1;
-    display: flex;
-    justify-content: center;
-}
-
 #slogan-container {
     position: relative;
-    left: -100px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 #slogan {
     font-family: 'Dancing Script';
     color: #4c4c4c;
-}
-
-#logo-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 150px;
-    z-index: 5;
-}
-#logo {
-    height: 225px;
-    width: 400px;
-    margin: auto;
-    margin-bottom: 25px;
-    z-index: 5;
+    float: left;
+    margin-left: 10%;
 }
 
 #contactLinksContainer {
     position: relative;
-    flex: 1;
-    right: -100px;
+    text-align: center;
+
+}
+
+#contactLinks-box {
+    float: right;
+    margin-right: 10%;
 }
 
 .contactLinks {
@@ -107,6 +103,22 @@ header {
     background-color: #1dd900;
     color: white;
 }
+
+#logo-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 150px;
+    z-index: 5;
+}
+#logo {
+    height: 225px;
+    width: 400px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+
 
 #main {
     margin: auto;
@@ -136,7 +148,6 @@ header {
 
 #banner-content {
     position: relative;
-    z-index: 6;
     top: -500px;
 }
 
@@ -320,14 +331,16 @@ header {
 
 }
 
-@media (min-width: 900px) {
-    .container {
-        display: flex;
+@media (max-width: 950px) {
+
+    #slogan-container {
+              display: none;
+          }
+
+    #contactLinks-box {
+        display: contents;
     }
 
-    #logo {
-        visibility: visible;
-    }
 }
 
 footer {
