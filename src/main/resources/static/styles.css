@@ -73,19 +73,20 @@ header {
     padding: 10px;
     border-radius: 5px;
     color: white;
-
-}
-
-.contactLinks a {
-    margin: auto;
     font-family: arial;
-    text-decoration-style: none;
-    color: white;
+
 }
 
 .contactLinks:hover {
+    transform: scale(1.1);
     text-decoration: none;
-    background-color: #1dd900;
+    color: white;
+    text-shadow: 0 0 5px white;
+    box-shadow: 0 0 5px white;
+}
+
+.contactLinks:visited {
+    text-decoration: none;
     color: white;
 }
 
